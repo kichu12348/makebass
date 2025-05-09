@@ -86,24 +86,6 @@ const users = [
 ];
 
 export default function UserList() {
-  const [isMobile, setIsMobile] = React.useState(false);
-
-  React.useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth <= 768) {
-        setIsMobile(true);
-      } else {
-        setIsMobile(false);
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-    handleResize();
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   return (
     <div className={styles.userList}>
@@ -117,13 +99,6 @@ export default function UserList() {
             <div className={styles.roles}>
               <div className={styles.roleTagContainer}>
                 {user.roles.map((role, idx) => {
-                    if (isMobile && idx===1) {
-                        const roleCount = user.roles.length - 1;
-                        return <span className={styles.roleTag} key={idx}>+{roleCount}</span>
-                    }
-                    if (isMobile && idx > 1) {
-                        return null;
-                    }
                   return (
                     <span
                       className={styles.roleTag}

@@ -34,14 +34,12 @@
           font-size: 1rem;
           color: #fff;
           font-weight: 600;
-          font-family: "Aeonik", sans-serif;
         }
 
         .username {
           font-size: 0.8rem;
           color: var(--off-white);
           font-weight: 400;
-          font-family: "Aeonik", sans-serif;
         }
       }
 
@@ -63,7 +61,6 @@
             font-size: 0.8rem;
             color: var(--off-white);
             font-weight: 400;
-            font-family: "Aeonik", sans-serif;
             background-color: var(--primary-color-light);
             color: var(--primary-color);
             padding: 1px 7px;
@@ -75,7 +72,6 @@
           font-size: 0.8rem;
           color: var(--off-white);
           font-weight: 400;
-          font-family: "Aeonik", sans-serif;
           padding: 1px 7px;
           border-radius: 16px;
         }
@@ -113,99 +109,22 @@
 
   @media screen and (max-width: 768px) {
     padding: 10px 20px;
-    gap: 5px;
     justify-content: flex-start;
-
+    
     .userListConatainer {
-      padding: 10px 20px;
-      width: 100%;
-      height: auto;
-      gap: 5px;
-      justify-content: flex-start;
-
       .userRow {
-        padding: 10px 0;
-        flex-wrap: wrap;
-        gap: 10px;
-
-        .nameBlock {
-          gap: 5px;
-          align-items: center;
-          justify-content: flex-start;
-
-          .name {
-            font-size: 0.8rem;
-          }
-
-          .username {
-            font-size: 0.6rem;
-          }
+        gap: 30px;
+        overflow-x: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none; 
+        white-space: nowrap;
+        
+        &::-webkit-scrollbar {
+          display: none; 
         }
-
+        
         .roles {
-          gap: 3px;
-          flex-wrap: wrap;
-          margin-top: 5px;
-          justify-content: flex-end;
-
-          .roleTagContainer {
-            flex-wrap: wrap;
-            gap: 3px;
-            justify-content: flex-end;
-
-            .roleTag {
-              font-size: 0.7rem;
-            }
-          }
-          .activity {
-            font-size: 0.6rem;
-          }
-          .editIcon {
-            font-size: 0.8rem;
-          }
-        }
-      }
-    }
-  }
-
-  @media screen and (max-width: 576px) {
-    padding: 10px 15px;
-
-    .userListConatainer {
-      padding: 10px 12px;
-
-      .userRow {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-
-        .nameBlock {
-          width: 100%;
-        }
-        .roles {
-          width: 100%;
-          margin-top: 0;
-        }
-      }
-    }
-  }
-
-  @media screen and (max-width: 400px) {
-    padding: 5px 10px;
-
-    .userListConatainer {
-      padding: 8px 10px;
-
-      .userRow {
-        padding: 8px 0;
-
-        .nameBlock {
-          flex-direction: column;
-          align-items: flex-start;
-
-          .name {
-            font-size: 0.75rem;
-          }
+          min-width: max-content;
         }
       }
     }
