@@ -4,6 +4,7 @@
   src: url("/fonts/aeonik.otf") format("opentype");
 }
 
+
 :root {
   --scrollbar-bg: #282828;
   --scrollbar-thumb: #333333;
