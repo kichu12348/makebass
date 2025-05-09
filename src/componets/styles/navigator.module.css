@@ -1,0 +1,68 @@
+
+.navbar{
+    padding: 5px 50px;
+    width: 100%;
+
+    .navButton{
+        background:none;
+        outline: none;
+        border: none;
+        position: relative;
+        color:var(--off-white);
+        font-size: 0.8rem;
+        cursor: pointer;
+        margin-left: 5px;
+        font-family: "Aeonik", sans-serif;
+        font-weight: 400;
+        transition: color 0.3s ease-in-out;
+
+        span{
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--white-color);
+            height: 2px;
+            border-radius: 2px;
+            display: none;
+        }
+
+        &:hover{
+            color: var(--white-color);
+
+            span{
+                display: block;
+                animation: width-increase 0.3s forwards;
+            }
+        }
+    }
+
+    .separator{
+        font-size: 0.8rem;
+        color: var(--off-white);
+        margin-left: 5px;
+    }
+
+    @media screen and (max-width: 768px) {
+        display: none;
+        /* padding: 5px 20px;
+
+        .navButton{
+            font-size: 0.5rem;
+        }
+
+        .separator{
+            font-size: 0.5rem;
+        } */
+    }
+
+}
+
+@keyframes width-increase {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+    
+}

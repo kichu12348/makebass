@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@font-face {
+  font-family: "Aeonik";
+  src: url("/fonts/aeonik.otf") format("opentype");
+}
+
+:root {
+  --scrollbar-bg: #282828;
+  --scrollbar-thumb: #333333;
+  --scrollbar-thumb-hover: rgb(70, 70, 70);
+  --white-color: #fff;
+  --primary-color: #00ff82;
+  --primary-color-light: rgba(0, 255, 132, 0.3);
+  --off-white: #a4a4a4;
+  --secondary-color: #282828;
+  --accent-color: #051f1b;
+  --error-red-transparent: rgba(240, 75, 75, 0.2);
+  --error-red: #f04b4b;
+  --transparent-bg: rgba(255, 255, 255, 0.4);
+  --very-transparent-bg: rgba(255, 255, 255, 0.04);
+  --solid-bg: #1b2725;
+  --transition-duration: 0.3s;
+  --fast-transition-duration: 0.2s;
+  --slow-transition-duration: 0.6s;
+  --transition-fn: cubic-bezier(0.4, 0, 0.2, 1);
+  --bounce-transition-fn: cubic-bezier(0.54, 1.12, 0.38, 1.11);
+  --bounce-transition-fn2: cubic-bezier(0, 0.2, 0.5, 3);
+  --transition: all var(--transition-duration) var(--transition-fn);
+  --bounce-transition: all var(--transition-duration)
+    var(--bounce-transition-fn);
+  --fast-transition: all var(--fast-transition-duration) var(--transition-fn);
+  --slow-transition: all var(--slow-transition-duration) var(--transition-fn);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: #131517;
+  color: var(--white-color);
+  font-size: 16px;
+  line-height: 1.5;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body::-webkit-scrollbar {
+  width: 4px;
+}
+body::-webkit-scrollbar-track {
+  background: var(--scrollbar-bg);
+}
+body::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}

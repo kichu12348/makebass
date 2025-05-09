@@ -1,0 +1,60 @@
+.guestRecentContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 50px;
+    width: 100vw;
+    height: auto;
+    
+    h3 {
+        font-size: 1.2rem;
+        color: #fff;
+        font-weight: 600;
+        font-family: "Aeonik", sans-serif;
+    }
+
+    .guestRecentButtons{
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        align-items: center;
+        gap: 5px;
+
+        .guestRecentButton{
+            background-color: var(--very-transparent-bg);
+            border: 1px solid var(--very-transparent-bg);
+            border-radius: 3px;
+            padding: 5px 10px;
+
+            span{
+                font-size: 0.8rem;
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                gap: 5px;
+                color:var(--off-white);
+                font-weight: 600;
+                font-family: "Aeonik", sans-serif;
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 10px 20px;
+        height: auto;
+        gap: 5px;
+        justify-content: flex-start;
+
+        h3 {
+            font-size: 1rem;
+        }
+
+        .guestRecentButtons{
+            display: none;
+        }
+        
+    }
+    
+}
